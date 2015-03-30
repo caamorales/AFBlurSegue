@@ -1,15 +1,19 @@
 AFBlurSegue
 ===========
 
+![alt text](https://raw.github.com/AlvaroFranco/AFBlurSegue/master/img/new.gif "New") **Now supports iOS 8 *real time* blur and *rotation***
+
 AFBlurSegue is a UIStoryboardSegue custom implementation that will blur the background of your modal view controller automatically.
 
 ![alt text](https://raw.github.com/AlvaroFranco/AFBlurSegue/master/img/preview.gif "Preview")
 
 ##Installation
 
+![alt text](https://raw.github.com/AlvaroFranco/AFBlurSegue/master/img/download.gif "Download")
+
 If you're using CocoaPods, just add this line to your Podfile:
 
-	pod 'AFBlurSegue', '~> 1.1'
+	pod 'AFBlurSegue', '~> 1.2'
 	
 If you're not, import these files to your project:
 
@@ -32,7 +36,7 @@ For presenting the view controller, call ```-performSegueWithIdentifier:sender:`
 
 	[self performSegueWithIdentifier:@"blurSegue" sender:self];
 	
-##Customization
+## Customization (not available from iOS 8 or above, because native blurring is used)
 
 You can customize a few things such as the blur radius, tint color, saturation delta factor and modal transition style. To do this, import the class into your class:
 
@@ -51,7 +55,7 @@ For customizing it, let's use ```-prepareForSegue:sender:```
 		blurSegue.saturationDeltaFactor = 0.5;
 	}
 	
-**I highly recommend ussing *UIModalTransitionStyleCrossDissolve* or *UIModalTransitionCoverVertical* for better results. These animations looks really great with the blur effect.**
+**I highly recommend using *UIModalTransitionStyleCrossDissolve* or *UIModalTransitionCoverVertical* for better results. These animations looks really great with the blur effect.**
 	
 	
 ##Blur method
